@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>ISPAAD FARMER REGISTRATION </title>
+      
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Summer Camp Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+         />
+      <script>
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+      </script>
+      <!-- Meta tags -->
+      <!-- Calendar -->
+      <link rel="stylesheet" href="css/jquery-ui.css" />
+      <!-- //Calendar -->
+      <!--stylesheets-->
+      <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <!-- Google fonts here-->
+      <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+      <!--//Google fonts here-->
+   </head>
+   <body>
+         
+      <h1 class="header-w3ls">
+         ISPAAD FARMER REGISTRATION 
+      </h1>
+      <!-- multistep form -->
+      <div class="main-bothside">
+        <form action="database.php" method="post">
+            <div class="main-title">
+               <h2> Farmer Details</h2>
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <input type="text" placeholder="Name" required="">
+               </div>
+			   <div class="form-mid-w3ls">
+                  <input id="datepicker2" name="text" type="text" placeholder="DOB" required="">
+               </div>
+               <div class="form-mid-w3ls">
+                  <input type="text" placeholder="ID" required="">
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-grid-w3ls">
+                  <input type="text" class="form-control" placeholder="Farmer Category" required="">
+               </div>
+               <div class="form-grid-w3ls">
+                  <input type="text" class="form-control" placeholder="PhoneNo" required="">
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <input type="text" placeholder="Field Address" required="">
+               </div>
+               <div class="form-mid-w3ls">
+                  <input type="text" placeholder="Size of Field" required="">
+               </div>
+               <div class="form-mid-w3ls">
+                  <input type="text" placeholder="Email" required="">
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <select class="form-control buttom">
+                     <option value="">Select Gender
+                     </option>
+                     <option value="category2">Female</option>
+                     <option value="category1">Male</option>
+				  </select>
+               </div>
+               <div class="form-mid-w3ls">
+                  <input type="text" placeholder="Nationality" required="">
+               </div>
+               <div class="form-mid-w3ls">
+                  <select class="form-control buttom">
+                     <option value="">Select District
+                     </option>
+                     <option value="category2">Kweneng</option>
+                     <option value="category1">Kgatleng</option>
+                     <option value="category3">SouthEast</option>
+                     <option value="category3">Gantsi</option>
+                     <option value="category3">Kgalagadi</option>
+                     <option value="category3">Chobe</option>
+                     <option value="category3">Central</option>
+
+                  </select>
+               </div>
+            </div>
+            <div class="main-title">
+               <h3>Spouse Details</h3>
+            </div>
+            <div class="form-group">
+               <div class="form-grid-w3ls">
+                  <input type="text" class="form-control" placeholder="Spouse Name" >
+               </div>
+               <div class="form-grid-w3ls">
+                  <input id="datepicker1" name="text" type="text" placeholder="DOB" >
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-grid-w3ls">
+                  <input type="text" class="form-control" placeholder="ID Number" >
+               </div>
+               <div class="form-grid-w3ls">
+                  <input type="text" class="form-control" placeholder="Tel/Cell" >
+               </div>
+            </div>
+            <div class="main-title">
+               <h3>Additional Comments</h3>
+            </div>
+            <div class="form-group">
+               <div class="form-grid-w3ls">
+                   <select class="form-control buttom">
+                     <option value="">SEED 
+                     </option>
+                     <option value="category2">Maize</option>
+                     <option value="category1">Sourghum</option>
+                     <option value="category3">Watermelon</option>
+                     <option value="category3">Millet</option>
+					 </select>
+               </div>
+               <div class="form-grid-w3ls">
+                  <input type="text" class="form-control" placeholder="Seed Type" required="">
+               </div>
+            </div>
+            <div class="form-control-w3l">
+               <textarea name="Enquiries" placeholder="Any Message..."></textarea>
+            </div>
+            <input type="submit" value="Submit">
+         </form>
+      </div>
+      <div class="copy">
+      </div>
+      <!-- js -->
+      <script src='js/jquery-2.2.3.min.js'></script>
+      <!-- //js -->
+      <!-- Calendar -->
+      <script src="js/jquery-ui.js"></script>
+      <script>
+         $(function () {
+         	$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+         });
+      </script>
+      <!-- //Calendar -->
+   </body>
+</html>
+
+ <?php
+include ("config.php");
+$query = "CREATE TABLE pdetails( 
+         
+          sal VARCHAR(5) NOT NULL ,
+          Name VARCHAR(30) NOT NULL, 
+		 Age VARCHAR(5) NOT NULL ,
+		 Gender VARCHAR(2) NOT NULL, 
+		 Nationality VARCHAR(15)NOT NULL,
+         Farm Category VARCHAR(50) NOT NULL, 
+		 Feild Address VARCHAR (200)  NOT NULL, 
+         District VARCHAR(30) NOT NULL, 
+		 Size of Feild INT(12) NOT NULL,
+		 PhoneNo INT(12) NOT NULL,
+		 email VARCHAR(20) NOT NULL,
+		 Additional Comments VARCHAR(500) NOT NULL ,
+		 Seed VARCHAR(20) NOT NULL'
+		 )";
+		
+            
+
+
+if(isset($_POST['submit']))
+{  
+	$sal = $_POST['sal'];
+	$fullname = $_POST['Name'];
+	
+	$Age = $_POST['Age'];
+    $Gender = $_POST['Gender'];
+	$Nationality = $_POST['Nationality'];
+	$FarmCategory= $_POST['Farm Category'];
+	$FeildAddress= $_POST['Feild Address'];
+	$District = $_POST['District'];
+	$Sizeoffeild = $_POST['Size of Feild'];
+	$PhoneNo  = $_POST['PhoneNo'];
+	
+	
+    $Email  = $_POST['Email'];
+	$AdditionalComments  = $_POST['Additional Comments'];
+	$Seed  = $_POST['Seed'];
+	
+  if ($sal == "" || $Name == "" || $Age ==""  ||$Gender ==""  || $Nationality ==""  || $FarmCategory ==""  || $FeildAddress ==""  || $District ==""  ||
+  $Sizeoffeild ==""  ||$PhoneNo ==""  ||$Email ==""  || $state ==""  || $AdditionalComments ==""  ||  $Seed ==""  )
+  
+  { 
+  echo"<center>";
+  echo"<font color=red>";
+  echo " Cannot SUBMIT , Check mandatory  fields are empty !";
+		echo "<br/>";
+		echo"</center>";
+		}
+	else{
+		mysql_query("insert into pdetails
+		('sal'Name ,Age,Gender,Nationality,FarmCategory,FeildAddress,District,Sizeoffeild,PhoneNo,Email,state,AdditionalComments,Seed) 
+		values
+		('$sal','$Name', '$Age','$Gender',  '$Nationality ', '$FarmCategory', '$FeildAddress', '$District','$Sizeoffeild ', '$PhoneNo','$Email','$state','$AdditionalComments', '$Seed')",$conn)
+		or die("Error ! refresh the page or relogin .");
+		
+		echo" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo"<center>";  
+		echo "data updated in the database , click on next to proceed  ";
+		echo "<br/>";
+		echo "<br/>";
+	    echo "<a href='edu.php'> NEXT </a>";	
+	}
+}
+?>
+
+
+PART FOR CONNECTION TO DATABASE
+
+
+<?php
+// -----------------------------------------------------------------------------
+// This function is common to all the database operations.
+// It makes a connection to the database given its name
+// and returns a link to the database.
+// -----------------------------------------------------------------------------
+
+function db_connect()
+{
+   //provide your database credentials 
+   $host_name = "root";
+   $user_name = "olu02961";
+   $password = "12345";
+   $db_name = "db_olu02961";
+   
+   $db_link = mysqli_connect($host_name, $user_name, $password, $db_name);
+   
+   if (!$db_link) {
+		die('Connect Error (' . mysqli_connect_errno() . ') '
+				. mysqli_connect_error());
+	}
+	
+   return $db_link;
+}
+?>
+
+
